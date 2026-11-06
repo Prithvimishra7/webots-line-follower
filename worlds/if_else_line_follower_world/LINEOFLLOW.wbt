@@ -1,0 +1,64 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.3229053817395681 -0.04539228406892528 0.9453420835817211 3.4058353161486763
+  position 1.3902629859651114 0.6442940757874723 1.1906002360931396
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 1.2 1
+  floorAppearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "../Screenshot 2026-10-15 195815.png"
+      ]
+      repeatS FALSE
+      repeatT FALSE
+    }
+    roughness 1
+    metalness 0
+    textureTransform TextureTransform {
+      center 0.3 0
+      scale 0.5 0.5
+    }
+  }
+}
+E-puck {
+  hidden position_0_0 984.7897099420045
+  hidden position_0_1 1119.8610514517604
+  hidden linearVelocity_0 -0.04789352748380458 -0.014417306747464977 2.116407466132941e-06
+  hidden angularVelocity_0 0.0005126344901342663 -0.001180565923532666 0.008266653245313615
+  hidden rotation_1 0 1 0 4.612802021989002
+  hidden linearVelocity_1 -0.04769141407053907 -0.014352584044270051 -1.817802113280099e-08
+  hidden angularVelocity_1 0.7175017713794474 -2.3837235317268277 0.009635489600902297
+  hidden rotation_2 0 1 0 1.4540667737940387
+  hidden linearVelocity_2 -0.04811237749082325 -0.01448859291562762 -5.509918121767506e-09
+  hidden angularVelocity_2 0.7245614278279976 -2.406479909899579 0.009932006292950116
+  translation -0.08797622896346313 0.4284911100080003 -6.448423658273784e-05
+  rotation 0.00013582582102012944 7.165595318311206e-05 0.9999999882083853 -2.8500176117533313
+  controller "my_controllerF"
+  groundSensorsSlot [
+    DistanceSensor {
+      translation 0 0.01 0
+      rotation 0 1 0 1.57
+      name "ir0"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.01 0
+      rotation 0 1 0 1.57
+      name "ir1"
+      type "infra-red"
+    }
+  ]
+}
